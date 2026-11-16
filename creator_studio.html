@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Studio | Analytics Dashboard</title>
+    <link rel="stylesheet" href="creator_studio.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <a href="#" class="brand">creator<span>.</span></a>
+
+        <p class="side-label">WORKSPACE</p>
+        <a href="#overview" class="side-link active">▦ Overview</a>
+        <a href="#videos" class="side-link">▷ Videos</a>
+        <a href="#addVideo" class="side-link">＋ Add Content</a>
+
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="avatar">RK</div>
+                <div>
+                    <strong>Creator Account</strong>
+                    <small>Personal workspace</small>
+                </div>
+            </div>
+            <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+
+        <header class="topbar">
+            <div>
+                <p class="breadcrumb">WORKSPACE / OVERVIEW</p>
+                <h1>Good day, Creator 👋</h1>
+                <p class="subheading">Track your content performance in one place.</p>
+            </div>
+            <a href="#addVideo" class="add-button">＋ Add Video</a>
+        </header>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <p>Total Views</p>
+                <h2 id="totalViews">0</h2>
+                <span>Across your videos</span>
+                <div class="stat-icon purple">◉</div>
+            </article>
+
+            <article class="stat-card">
+                <p>Total Videos</p>
+                <h2 id="totalVideos">0</h2>
+                <span>Content published</span>
+                <div class="stat-icon orange">▷</div>
+            </article>
+
+            <article class="stat-card">
+                <p>Average CTR</p>
+                <h2 id="averageCTR">0%</h2>
+                <span>Click-through rate</span>
+                <div class="stat-icon green">↗</div>
+            </article>
+
+            <article class="stat-card">
+                <p>Watch Time</p>
+                <h2 id="totalWatchTime">0h</h2>
+                <span>Total entered watch time</span>
+                <div class="stat-icon blue">◷</div>
+            </article>
+        </section>
+
+        <section class="content-layout">
+            <div class="panel performance-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="panel-label">CONTENT OVERVIEW</p>
+                        <h2>Performance summary</h2>
+                    </div>
+                    <span class="live-label">● YOUR DATA</span>
+                </div>
+
+                <div class="chart-area">
+                    <div class="chart-y">
+                        <span>High</span>
+                        <span>Medium</span>
+                        <span>Low</span>
+                        <span>0</span>
+                    </div>
+                    <div class="chart-bars">
+                        <div class="bar-column"><div class="bar" style="height:45%"></div><span>Video 1</span></div>
+                        <div class="bar-column"><div class="bar" style="height:75%"></div><span>Video 2</span></div>
+                        <div class="bar-column"><div class="bar" style="height:55%"></div><span>Video 3</span></div>
+                        <div class="bar-column"><div class="bar" style="height:90%"></div><span>Video 4</span></div>
+                        <div class="bar-column"><div class="bar" style="height:65%"></div><span>Video 5</span></div>
+                        <div class="bar-column"><div class="bar" style="height:35%"></div><span>Video 6</span></div>
+                    </div>
+                </div>
+                <p class="chart-note">Illustrative visual. Enter your video statistics below to update the dashboard figures.</p>
+            </div>
+
+            <div class="panel tips-panel">
+                <p class="panel-label">CREATOR NOTE</p>
+                <h2>Small steps.<br>Better content.</h2>
+                <p>Keep track of your videos and understand which content performs better.</p>
+                <div class="tip-item"><span>01</span> Compare video views</div>
+                <div class="tip-item"><span>02</span> Monitor your CTR</div>
+                <div class="tip-item"><span>03</span> Review watch time</div>
+            </div>
+        </section>
+
+        <section class="panel add-panel" id="addVideo">
+            <div class="panel-heading">
+                <div>
+                    <p class="panel-label">CONTENT MANAGEMENT</p>
+                    <h2>Add video performance</h2>
+                </div>
+                <span class="form-icon">＋</span>
+            </div>
+
+            <form id="videoForm">
+                <div class="form-grid">
+                    <div class="form-group full">
+                        <label for="videoTitle">Video title</label>
+                        <input type="text" id="videoTitle" placeholder="Enter your video title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="videoViews">Views</label>
+                        <input type="number" id="videoViews" placeholder="Example: 12000" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="videoCTR">CTR (%)</label>
+                        <input type="number" id="videoCTR" placeholder="Example: 5.5" min="0" max="100" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="videoDuration">Average view duration</label>
+                        <input type="text" id="videoDuration" placeholder="Example: 2:45" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="videoWatchTime">Watch time (hours)</label>
+                        <input type="number" id="videoWatchTime" placeholder="Example: 120" min="0" step="0.1" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Save Video Performance ↗</button>
+            </form>
+        </section>
+
+        <section class="panel videos-panel" id="videos">
+            <div class="panel-heading">
+                <div>
+                    <p class="panel-label">YOUR CONTENT</p>
+                    <h2>Video performance</h2>
+                </div>
+                <span class="video-count" id="videoCount">0 videos</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>VIDEO TITLE</th>
+                            <th>VIEWS</th>
+                            <th>CTR</th>
+                            <th>AVG. DURATION</th>
+                            <th>WATCH TIME</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="videoTable">
+                        <tr class="empty-row">
+                            <td colspan="6">No videos added yet. Add your first video above.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="dashboard-footer">
+            <span>Creator Studio · Personal Analytics Dashboard</span>
+            <span>Built by Ram Kumar</span>
+        </footer>
+
+    </main>
+</div>
+
+<script src="creator_studio.js"></script>
+</body>
+</html>

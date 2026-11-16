@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager | Stay Productive</title>
+    <link rel="stylesheet" href="task_manager.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <a href="#" class="brand">focus<span>.</span></a>
+
+        <p class="side-heading">MENU</p>
+        <a href="#dashboard" class="side-link active">▦ Dashboard</a>
+        <a href="#tasks" class="side-link">☑ My Tasks</a>
+        <a href="#addTask" class="side-link">＋ New Task</a>
+
+        <div class="sidebar-note">
+            <span>✦</span>
+            <h3>Stay focused.</h3>
+            <p>Small progress every day leads to big results.</p>
+        </div>
+
+        <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">YOUR WORKSPACE</p>
+                <h1>My Tasks</h1>
+                <p class="subtitle">Organise your day and get things done.</p>
+            </div>
+            <a href="#addTask" class="new-task-button">＋ New Task</a>
+        </header>
+
+        <section class="welcome-banner">
+            <div>
+                <p>MAKE TODAY COUNT</p>
+                <h2>One task at a time.<br><span>You've got this.</span></h2>
+            </div>
+            <div class="banner-icon">✦</div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <div class="stat-icon purple">☷</div>
+                <p>Total Tasks</p>
+                <h2 id="totalTasks">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <p>Completed</p>
+                <h2 id="completedTasks">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon orange">◷</div>
+                <p>Pending</p>
+                <h2 id="pendingTasks">0</h2>
+            </article>
+        </section>
+
+        <section class="panel progress-panel">
+            <div class="progress-header">
+                <div>
+                    <p class="eyebrow">YOUR PROGRESS</p>
+                    <h2>Daily completion</h2>
+                </div>
+                <strong id="progressPercent">0%</strong>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p id="progressText">Start adding tasks to track your progress.</p>
+        </section>
+
+        <section class="panel add-panel" id="addTask">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">PLAN YOUR DAY</p>
+                    <h2>Create a new task</h2>
+                </div>
+                <span class="plus-icon">＋</span>
+            </div>
+
+            <form id="taskForm">
+                <div class="form-grid">
+                    <div class="form-group task-title-group">
+                        <label for="taskInput">Task name</label>
+                        <input type="text" id="taskInput" placeholder="What do you need to do?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskCategory">Category</label>
+                        <select id="taskCategory">
+                            <option value="Personal">Personal</option>
+                            <option value="Work">Work</option>
+                            <option value="Learning">Learning</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">＋ Add Task</button>
+            </form>
+        </section>
+
+        <section class="panel tasks-panel" id="tasks">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">YOUR TO-DO LIST</p>
+                    <h2>All tasks</h2>
+                </div>
+                <span class="task-total" id="taskCount">0 tasks</span>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <div class="task-list" id="taskList">
+                <div class="empty-state" id="emptyMessage">
+                    <span>✦</span>
+                    <h3>No tasks yet</h3>
+                    <p>Add your first task and get started.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span>Focus · Task Management Application</span>
+            <span>Built by Ram Kumar</span>
+        </footer>
+
+    </main>
+</div>
+
+<script src="task_manager.js"></script>
+</body>
+</html>

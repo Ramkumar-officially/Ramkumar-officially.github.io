@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Explorer | Discover Madurai</title>
+    <link rel="stylesheet" href="city_explorer.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="portfolio.html" class="logo">CITY<span>EXPLORER.</span></a>
+    <nav>
+        <a href="#discover">Discover</a>
+        <a href="#places">Places</a>
+        <a href="#food">Food</a>
+    </nav>
+    <a href="#places" class="nav-button">Explore City ↗</a>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <p class="eyebrow">YOUR CITY, YOUR STORY</p>
+        <h1>Discover the<br><span>Heart of Madurai.</span></h1>
+        <p>Explore heritage streets, beautiful landmarks, local food and the stories that make this city special.</p>
+        <a href="#places" class="hero-button">Start Exploring ↗</a>
+    </div>
+    <div class="hero-note">
+        <span>01 / 03</span>
+        <p>Explore beyond the ordinary.</p>
+    </div>
+</section>
+
+<section class="intro section" id="discover">
+    <div>
+        <p class="eyebrow">WELCOME TO MADURAI</p>
+        <h2>A city filled with<br><span>stories and traditions.</span></h2>
+    </div>
+    <p class="intro-text">
+        From centuries-old temples to lively markets and unforgettable street food,
+        Madurai offers a unique experience at every corner. Discover the city one
+        place at a time.
+    </p>
+</section>
+
+<section class="section" id="places">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">EXPLORE THE CITY</p>
+            <h2>Find your next <span>experience.</span></h2>
+        </div>
+        <span class="count-label">03 FEATURED PLACES</span>
+    </div>
+
+    <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Places</button>
+        <button class="filter-btn" data-filter="heritage">Heritage</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="market">Markets</button>
+    </div>
+
+    <div class="search-box">
+        <span>⌕</span>
+        <input type="text" id="placeSearch" placeholder="Search places in Madurai...">
+    </div>
+
+    <div class="places-grid">
+        <article class="place-card" data-category="heritage" data-name="meenakshi amman temple">
+            <div class="place-image temple-image">
+                <span class="image-tag">HERITAGE</span>
+                <span class="image-number">01</span>
+            </div>
+            <div class="place-info">
+                <p class="place-location">📍 MADURAI CITY</p>
+                <h3>Meenakshi Amman Temple</h3>
+                <p>A magnificent temple known for its colourful towers, architecture and rich history.</p>
+                <div class="place-footer">
+                    <span>History & Architecture</span>
+                    <a href="https://en.wikipedia.org/wiki/Meenakshi_Temple" target="_blank">Discover ↗</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="place-card" data-category="market" data-name="gandhi memorial museum">
+            <div class="place-image museum-image">
+                <span class="image-tag">HISTORY</span>
+                <span class="image-number">02</span>
+            </div>
+            <div class="place-info">
+                <p class="place-location">📍 TAMUKKAM</p>
+                <h3>Gandhi Memorial Museum</h3>
+                <p>Explore India's freedom movement and historical exhibits in this important museum.</p>
+                <div class="place-footer">
+                    <span>Culture & Learning</span>
+                    <a href="https://en.wikipedia.org/wiki/Gandhi_Memorial_Museum,_Madurai" target="_blank">Discover ↗</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="place-card" data-category="nature" data-name="samanar hills">
+            <div class="place-image hills-image">
+                <span class="image-tag">NATURE</span>
+                <span class="image-number">03</span>
+            </div>
+            <div class="place-info">
+                <p class="place-location">📍 KEEZHAKUILKUDI</p>
+                <h3>Samanar Hills</h3>
+                <p>Discover ancient Jain caves, inscriptions and a peaceful rocky landscape.</p>
+                <div class="place-footer">
+                    <span>Nature & Heritage</span>
+                    <a href="https://en.wikipedia.org/wiki/Samanar_Hills" target="_blank">Discover ↗</a>
+                </div>
+            </div>
+        </article>
+    </div>
+    <p class="empty-message" id="emptyMessage">No places found. Try another search.</p>
+</section>
+
+<section class="food-section section" id="food">
+    <div class="food-content">
+        <p class="eyebrow">A TASTE OF MADURAI</p>
+        <h2>Every street has<br>a <span>flavour.</span></h2>
+        <p>From famous jigarthanda to crispy parotta and local street food, discover the food culture that makes Madurai unforgettable.</p>
+        <a href="https://en.wikipedia.org/wiki/Madurai_cuisine" target="_blank" class="hero-button">Explore Food Culture ↗</a>
+    </div>
+    <div class="food-art">
+        <div class="food-circle">MADURAI<br><strong>FOOD</strong><br>DIARIES</div>
+    </div>
+</section>
+
+<section class="quote-section">
+    <p>“The best way to know a city is to explore it like a local.”</p>
+    <span>THE CITY EXPLORER EXPERIENCE</span>
+</section>
+
+<footer>
+    <a href="#" class="logo">CITY<span>EXPLORER.</span></a>
+    <p>A city discovery project by Ram Kumar</p>
+    <a href="portfolio.html">← Back to Portfolio</a>
+</footer>
+
+<script src="city_explorer.js"></script>
+</body>
+</html>
